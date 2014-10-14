@@ -1,7 +1,8 @@
+
 <% states = ["New York", "Connecticut", "New Jersey"] %>
 <% cities = ["New York City", "Stamford", "Jersey City", "Hartford", "Trenton", "Albany"] %>
 
-<h2>States</h2>
+<h3>States</h3>
 
 <ul>
   <% states.each do |state| %>
@@ -9,10 +10,31 @@
   <% end %>
 </ul>
 
-<h2>Cities</h2>
+<h3>Cities</h3>
 
 <ul>
   <% cities.each do |city| %>
   <li><%= city %></li>
   <% end %>
 </ul>
+
+<br><br><br>
+<!-- stretch goal below this line -->
+
+
+<% places = [
+  ["New York", ["New York City", "Albany"] ],
+  ["connecticut", ["Stamford", "Hartford", "Norwalk"]],
+  ["New Jersey", ["Jersey City", "Trenton"]]
+]%>
+
+<h2>Cities and States</h2>
+
+<% places.each do |place| %>
+  <h3><%= place[0] %></h3>
+  <ul>
+    <% place[1].each do |city| %>
+      <li><%= city %></li>
+    <% end %>
+  </ul>
+<% end %>
